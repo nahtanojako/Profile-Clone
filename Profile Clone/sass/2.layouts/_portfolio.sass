@@ -1,0 +1,42 @@
+#portfolio
+  .filter
+    text-align: center
+    @extend .mx-auto
+    margin-bottom: 2rem
+
+  .portfolio-item
+    margin-bottom: 2rem
+    position: relative
+    overflow: hidden
+    &:hover .portfolio-link .caption
+      opacity: 1
+
+    .portfolio-link
+      position: relative
+      display: block
+      .caption
+        position: absolute
+        top: 0
+        left: 0
+        background: rgba($primary, 0.7)
+        height: 100%
+        width: 100%
+        +trans(all 0.3s ease)
+        opacity: 0
+        i
+          color: $white
+          font-size: 3rem
+          +center
+
+  .row
+    display: block
+    padding: 0 1rem
+
++bp(xs-l)
+  #portfolio
+    .row
+      display: flex
+      flex-direction: row
+      .portfolio-item
+        padding: 0 0.5rem
+        margin-bottom: 1rem

@@ -1,0 +1,86 @@
+// FLEX
+=d-flex($flex, $dir, $x, $y)
+  display: -webkit-$flex
+  display: -moz-$flex
+  display: -ms-$flex
+  display: -o-$flex
+  display: $flex
+  -webkit-flex-wrap: wrap
+  -moz-flex-wrap: wrap
+  -ms-flex-wrap: wrap
+  -o-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-flex-direction: $dir
+  -moz-flex-direction: $dir
+  -ms-flex-direction: $dir
+  -o-flex-direction: $dir
+  flex-direction: $dir
+  -webkit-justify-content: $x
+  -moz-justify-content: $x
+  -ms-justify-content: $x
+  -o-justify-content: $x
+  justify-content: $x
+  -webkit-align-items: $y
+  -moz-align-items: $y
+  -ms-align-items: $y
+  -o-align-items: $y
+  align-items: $y
+
+=center($axis: 'both')
+  position: absolute
+  @if $axis == 'x'
+    left: 50%
+    +transform(translateX(-50%))
+  @if $axis == 'y'
+    top: 50%
+    +transform(translateY(-50%))
+  @if $axis == 'both'
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+
+
+// Transition
+=trans($prop...)
+  -webkit-transition: $prop
+  -moz-transition: $prop
+  -ms-transition: $prop
+  -o-transition: $prop
+  transition: $prop
+
+// Transition
+=transform($prop...)
+  -webkit-transform: $prop
+  -moz-transform: $prop
+  -ms-transform: $prop
+  -o-transform: $prop
+  transform: $prop
+
+
+// Media Queries Breakpoints
+=bp($size)
+
+  // Large screen / wide desktop
+  @if $size == 'lg'
+    @media (min-width: $bp-lg)
+      @content
+
+  // Medium screen / desktop
+  @if $size == 'md'
+    @media (min-width: $bp-md)
+      @content
+
+  // Small screen / tablet
+  @if $size == 'sm'
+    @media (min-width: $bp-sm)
+      @content
+
+  // Extra small screen / phone, Orientation: landscape
+  @if $size == 'xs-l'
+    @media (min-width: $bp-xs-l)
+      @content
+
+  // Extra small screen / phone
+  @if $size == 'xs'
+    @media (max-width: $bp-xs)
+      @content

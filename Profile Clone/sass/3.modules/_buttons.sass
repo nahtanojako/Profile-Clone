@@ -1,0 +1,26 @@
+.btn
+  display: inline-block
+  padding: 0.8rem 1.1rem
+  border: 1px solid transparent
+  outline: none
+  text-transform: uppercase
+  cursor: pointer
+  +trans(background 0.3s ease)
+
+.btn-white
+  background: $white
+  border-color: $primary
+  color: $primary
+  margin: 5px
+  &:hover
+    color: $white
+    background: $primary
+
+.btn-primary
+  background: $primary
+  border-color: $primary
+  color: $white
+  margin: 5px
+  &:hover
+    color: $primary
+    background: $white

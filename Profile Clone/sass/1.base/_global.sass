@@ -1,0 +1,129 @@
+/*==================
+  Global styles 
+  ====================*/
+
+// Grid
+.container-fluid
+  width: 100%
+  padding-right: $gutter !important
+  padding-left: $gutter !important
+  margin-right: auto
+  margin-left: auto
+
+.wrapper
+  +bp(md)
+    padding-left: 2rem
+    padding-right: 2rem
+
+.row
+  +d-flex(flex, column, start, center)
+  margin-right: -1rem
+  margin-left: -1rem
+  +bp(sm)
+    flex-direction: row
+
+.col, 
+.col-xs-l-4,
+.col-xs-l-6,
+.col-sm-3,
+.col-sm-4,
+.col-sm-6,
+.col-sm-8
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: $gutter
+  padding-left: $gutter
+
+.col-sm-6
+  +bp(sm)
+    flex-basis: 50%
+
+.col-sm-8
+  +bp(sm)
+    flex-basis: $col-8
+
+.col-sm-4
+  +bp(sm)
+    flex-basis: $col-4
+
+.col-xs-l-6
+  +bp(xs-l)
+    flex-basis: 50%
+
+.col-xs-l-4
+  +bp(xs-l)
+    flex-basis: 33.3333%
+
+.col-sm-3
+  +bp(sm)
+    flex-basis: 25%
+
+
+.my-auto
+  margin-top: auto
+  margin-bottom: auto
+
+.mx-auto
+  margin-left: auto
+  margin-right: auto
+
+
+// body
+body
+  font-family: $ff-body
+  font-size: 1rem
+  line-height: 1.5
+  color: $gray
+  padding-top: 4rem
+
+
+// section
+.resume-section
+  padding: 5rem 0
+  border-bottom: 1px solid rgba($black, 0.1)
+
+.section-head,
+.head-border
+  @extend .mx-auto
+  
+
+.section-head
+  font-size: 2.5rem
+  text-align: center
+
+
+.head-border
+  width: 4rem
+  height: 0.7rem
+  background: $primary
+  margin-top: 0.5rem
+  margin-bottom: 3rem
+
+
+
+// Text
+.text-primary
+  color: $primary
+
+
+// Headings
+h1,
+.section-head
+  color: $off-black
+  text-transform: uppercase
+  font-family: $ff-head
+  font-weight: 700
+
+
+// Default for Before and After Pseudo class
+.pseudo
+  position: absolute
+  content: ""
+  display: block
+
+.d-none
+  display: none
+
+
+

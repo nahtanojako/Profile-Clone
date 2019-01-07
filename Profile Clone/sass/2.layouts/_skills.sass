@@ -1,0 +1,34 @@
+.skills-section
+  background: $bg-overlay, url(../img/bg-stats.jpg) no-repeat center center
+  background-size: cover
+  margin-left: -1rem
+  margin-right: -1rem
+  overflow: hidden
+  padding: 3rem 0
+  text-align: center
+  h2
+    color: $white
+    margin-bottom: 3rem
+
+  .skills-item
+    background: rgba($black, 0.5)
+    padding: 2rem
+    color: $white
+    margin-bottom: 2rem
+    +bp(sm)
+      padding: 1rem 0
+    i
+      color: $primary
+      font-size: 6rem
+      margin-bottom: 1rem
+    .counter
+      color: $white
+      font-size: 2rem
+      font-weight: 700
+
+  .row
+    display: block
+    +bp(xs-l)
+      display: flex
+      flex-direction: row
+

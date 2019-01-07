@@ -1,0 +1,60 @@
+#contact
+  h2,
+  p
+    margin-bottom: 2rem
+
+  textarea
+    resize: vertical
+
+.contact-info
+  margin-top: 4rem
+  text-align: center
+  +bp(sm)
+    text-align: left
+    margin-top: 0
+  .contact-info-item
+    margin-bottom: 3rem
+    i
+      padding-right: 1rem
+      color: $primary
+      font-size: 3rem
+    h4
+      font-size: 1.5rem
+      text-transform: uppercase
+      color: rgba($black, 0.6)
+    p
+      margin: 0!important
+
+  .list-inline
+    .list-item
+      display: inline-block
+      position: relative
+      margin: 0 5px
+      a
+        width: 2.5rem
+        height: 2.5rem
+        border-radius: 50%
+        display: block
+        background: white
+        border: 2px solid #4267b2
+        position: relative
+        i
+          color: #4267b2
+          position: absolute
+          +center
+
+      &:nth-child(2)
+        a
+          border-color: #4AB3F4
+          i
+            color: #4AB3F4
+
+      &:nth-child(3)
+        a
+          border-color: #e24343
+          i
+            color: #e24343
+          
+          
+
+
